@@ -5,4 +5,8 @@ Some challenges to practice coding!
   Time complexity: O(nLogn)
   Space complecity: O(1)
   
+2. find-two-subarrays-of-equal-sum-by-removing-one-element.cpp: Is it possible to devide an array into two subarrays of equal sum by removing one elment?
+  Time complexity: O(n)
+  Space complecity: O(1)
+  
 
