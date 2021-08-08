@@ -1,6 +1,6 @@
 
 int findPartitionPivot(const vector<int> &input){
-    if(input.size() <= 3)
+    if(input.size() < 3)
         return -1;
 
     int sum = 0;
@@ -15,6 +15,10 @@ int findPartitionPivot(const vector<int> &input){
         rightSum = sum -  leftSum - input[pivotIndex];
         if(rightSum == leftSum)
             return pivotIndex;
+        if(sum - input[0] == 2 * rightSum)
+            return 0;
+        if(sum - input[input.size() - 1] == 2 * leftSum)
+            return input.size() - 1;
         leftSum += input[pivotIndex];
     }
     return -1;
